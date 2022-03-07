@@ -1,0 +1,99 @@
+.header {
+  padding: 2rem 9%;
+  position: fixed;
+  /*length of nav bar*/
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #9cc094;
+  /*color for nav bar*/
+}
+/*word next to heart logo*/
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+/*the heart logo in-front Make-Med*/
+.header .logo i {
+  color: var(--red);
+}
+/*Name of each menu on nav bar*/
+.header .navbar a {
+  font-size: 1.7rem;
+  color: var(--black);
+  margin-left: 2rem; /*dis between 
+each words*/
+}
+/*change color when click on*/
+.header .navbar a:hover {
+  color: var(--white);
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  list-style: none;
+  width: 50vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+/*search and login icons*/
+header .icons i {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+/*change color on icons*/
+header .icons i:hover {
+  color: var(--black);
+}
+
+header .search-bar-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background: #333;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar {
+  width: 100%;
+  padding: 1rem;
+  text-transform: none;
+  color: #333;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+}
+
+header .search-bar-container label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover {
+  color: var(--orange);
+}
+
+#logobar img {
+  width: 75px;
+  margin: 10px 0px;
+}
