@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { MenuItems } from "./MenuItems";
-import "./Navbar.css";
 
 class Navbar extends Component {
   render() {
     return (
       <header className="header">
         <a href="#" className="logo">
-          <i className="fas fa-heartbeat"></i> Make-Med Sync{" "}
+          <i className="fas fa-heartbeat"></i> Make-Med Sync
         </a>
         <nav className="navbar">
           <ul className="nav-menu">

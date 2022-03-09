@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Pages.css";
 import Video from "./Video";
 import video2 from "./images/vid-2.mp4";
 import video3 from "./images/vid-3.mp4";
