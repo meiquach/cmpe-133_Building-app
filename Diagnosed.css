@@ -1,0 +1,586 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+  --green: #16a085;
+  --black: #444;
+  --white: #ffffff;
+  --red: #ff0000;
+  --r1: #d43557;
+  --light-color: #777;
+  --box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+  --border: 0.2rem solid var(--green);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Poppins;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.top_nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background: #9cc094;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.top_nav .left {
+  display: flex;
+  align-items: center;
+}
+
+/* .top_nav .left .logo p {
+  font-size: 25px;
+  font-weight: bold;
+  color: #494949;
+  margin-right: 25px;
+  font-family: cambria;
+}
+
+.top_nav .left .logo p span {
+  font-family: cambria;
+  color: #267a3c;
+  color: #37a000;
+} */
+
+/*word next to heart logo*/
+.top_nav .left .logo .l1 {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+/*the heart logo in-front Make-Med*/
+.top_nav .left .logo .l1 i {
+  color: var(--r1);
+}
+
+.responsive {
+  width: 100px;
+  max-width: 200px;
+  height: auto;
+  padding: 0px 20px;
+}
+
+.top_nav .right ul {
+  display: flex;
+}
+
+/* .top_nav .right ul li {
+  border: solid #9cc094;
+  margin: 0 10px;
+} */
+
+.top_nav .right ul li a {
+  display: block;
+  padding: 6px 8px;
+  color: var(--black);
+  font-size: 18px;
+}
+
+/* .top_nav .right ul li:hover {
+  background: linear-gradient(
+    to right, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.6)
+     rgba(83, 181, 161, 1),
+    rgba(83, 181, 161, 1)
+  );
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 10s;
+} */
+
+/*change color when click on*/
+.top_nav .right ul li a:hover {
+  color: var(--white);
+}
+
+/* .top_nav .right ul li:active {
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #494949;
+  background: #d9d9d9;
+} */
+
+/* Style bottom nav*/
+.bottom_nav {
+  margin-top: 80px;
+  width: 100%;
+  height: 46px;
+  background: #babab8;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #babab8;
+  text-transform: uppercase;
+  float: left;
+  border: none;
+  border: 6px none;
+  border-radius: 12px 12px 0 0;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 18px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #9ab58f;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  background-color: #e8e8e8;
+  color: black;
+  display: none;
+  padding: 70px 20px;
+  height: 100%;
+}
+
+/* Style previous and next */
+.N_P {
+  margin: 1rem;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+
+.NP {
+  display: inline-block;
+  padding: 0rem 8rem;
+  text-align: center;
+}
+
+#Symptoms .N_P {
+  margin: 1rem;
+  padding: 1rem 0rem;
+  text-align: right;
+}
+
+#Symptoms .NP {
+  display: inline-block;
+  padding: 0rem 8rem;
+  text-align: center;
+}
+
+.N_P .previous,
+.next,
+.submit {
+  background-color: #babab8;
+  text-transform: uppercase;
+  float: right;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 7px 0px;
+  width: 120px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.N_P .previous:hover,
+.next:hover,
+.submit:hover {
+  background-color: #9ab58f;
+}
+
+.box {
+  display: inline-block;
+  padding: 0rem 5rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+/*SYMPTOMS*/
+#Symptoms .ss {
+  margin: 1rem;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+
+#Symptoms p {
+  font-size: 19px;
+  text-align: center;
+}
+
+/* Customize the label (the container) */
+#Symptoms .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+#Symptoms .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+#Symptoms .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: solid black;
+}
+
+/* On mouse-over, add a grey background color */
+#Symptoms .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a green background */
+#Symptoms .container input:checked ~ .checkmark {
+  background-color: #296321;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+#Symptoms .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+#Symptoms .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+#Symptoms .container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/*DETAILS*/
+#Details .dd {
+  margin: 1rem;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+
+#Details h3,
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Customize the label (the container) */
+#Details .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+#Details .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+#Details .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: solid black;
+}
+
+/* On mouse-over, add a grey background color */
+#Details .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+#Details .container input:checked ~ .checkmark {
+  background-color: #296321;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+#Details .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+#Details .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+#Details .container .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*Detail i hover for more information*/
+.i {
+  position: relative;
+  display: inline-block;
+}
+
+.i .itext {
+  visibility: hidden;
+  width: 260px;
+  font-size: 16px;
+  background-color: #9c9c9c;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  top: -5px;
+  left: 122%;
+  text-align: justify;
+  word-wrap: break-word;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.i:hover .itext {
+  visibility: visible;
+}
+
+/*FREQUENCY*/
+#Frequency .ff {
+  margin: 1rem;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+
+#Frequency .box {
+  display: inline-block;
+  padding-left: 4rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+#Frequency p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Customize the label (the container) */
+#Frequency .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+#Frequency .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+#Frequency .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: solid black;
+}
+
+/* On mouse-over, add a grey background color */
+#Frequency .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+#Frequency .container input:checked ~ .checkmark {
+  background-color: #296321;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+#Frequency .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+#Frequency .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+#Frequency .container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+#Frequency .box #inner {
+  font-size: 20px;
+  width: 250px;
+  text-align: center;
+  background: #b0b0b0;
+  padding: 6px 6px 6px 6px;
+}
+
+#Frequency .box #inner .container {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 0px 33px;
+  left: 10px;
+}
+
+/* TREATMENT */
+#Treatment h3,
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
+#Treatment h5 {
+  font-size: 18px;
+}
+
+#Treatment .medi {
+  margin: 1rem;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+#Treatment .medi p {
+  font-size: 18px;
+}
+
+img {
+  border-radius: 20px;
+  width: 25%;
+  height: 25%;
+  margin: 5px 10px;
+}
+
+#notice {
+  color: var(--red);
+  font-weight: bold;
+}
+
+.popup-message {
+  display: none;
+  position: absolute;
+  text-align: center;
+  border: 2px solid #16a085;
+  border-radius: 10px;
+  padding: 5px 5px;
+  background: #f7f7e8;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -100px;
+  width: 600px;
+  height: 150px;
+  z-index: 1000;
+}
+
+.whole {
+  height: 100%;
+}
+
+.whole#blur.active {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.s {
+  margin: auto;
+  width: 45%;
+  padding: 10px;
+  text-align: center;
+}
+
+.ok-btn {
+  display: inline-block;
+  padding: 0.5rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  color: var(--green);
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: #fff;
+  text-align: center;
+}
+
+.ok-btn:hover {
+  background: var(--green);
+  color: #fff;
+}
