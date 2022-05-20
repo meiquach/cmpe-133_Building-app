@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <!--favicon-->
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/DoctorAppt.css">
+  <script src="js/DoctorAppt.js"></script> 
+  <title>Doctor Appointment</title>
+</head>
+
+<body>
+  <div class="whole" id="blur">
+    <h2>Doctor Appointment</h2>
+    <form name="Form">
+      <label class="required-field">Full Name</label>
+      <div class="fn">
+        <div>
+          <input name="f1" type="text" class="b" placeholder="Your name...">
+          <small>First Name</small>
+        </div>
+        <div>
+          <input name="f2" type="text" placeholder="Your last name...">
+          <small>Last Name</small>
+        </div>
+      </div>
+      <div class="fn">
+        <label class="required-field">Age</label>
+      <input name="f3" type="number" min="1" max="123" class="b">
+      <label class="required-field">Phone number</label>
+      <input name="f4" type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="b">
+      <label class="required-field">Select an appointment date</label>
+      <input name="f5" type="date" class="b">
+      <label class="required-field">Time</label>
+      <input name="f6" type="time" class="b">
+      <label>Comments</label><br>
+      <textarea id="comment" cols="10" rows="10" placeholder="Extra description" class="b"></textarea>
+      </div>
+      <div class="s">
+        <button type="button" class="submit" onclick="Filled()">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="popup-message" id="popup">
+    <p>You have successfully booked an appointment!</p>
+    <p>Your reminder is being sent to your email</p>
+    <p>Please click OK to return to Homepage</p>
+    <div class="s">
+        <button type="button" class="ok-btn" onclick="window.location.href='index.html'">OK</button>
+    </div>
+  </div>
+</body>
+</html>
